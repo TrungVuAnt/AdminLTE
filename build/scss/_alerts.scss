@@ -4,13 +4,10 @@
  */
 
 .alert {
-  @include border-radius(3px);
-  h4 {
-    font-weight: 600;
-  }
   .icon {
     margin-right: 10px;
   }
+
   .close {
     color: #000;
     opacity: .2;
@@ -18,30 +15,31 @@
       opacity: .5;
     }
   }
+
   a {
-    color: #fff;
+    color: $white;
     text-decoration: underline;
   }
 }
 
 //Alert Variants
 .alert-success {
-  @extend .bg-green;
-  border-color: darken($brand-success, 5%);
+  @extend .bg-success;
+  border-color: darken(theme-color("success"), 5%);
 }
 
 .alert-danger,
 .alert-error {
-  @extend .bg-red;
-  border-color: darken($brand-danger, 5%);
+  @extend .bg-danger;
+  border-color: darken(theme-color("danger"), 5%);
 }
 
 .alert-warning {
-  @extend .bg-yellow;
-  border-color: darken($brand-warning, 5%);
+  @extend .bg-warning;
+  border-color: darken(theme-color("warning"), 5%);
 }
 
 .alert-info {
-  @extend .bg-aqua;
-  border-color: darken($brand-info, 5%);
+  @extend .bg-info;
+  border-color: darken(theme-color("info"), 5%);
 }
